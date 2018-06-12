@@ -1,0 +1,141 @@
+body{
+	font-family: 'OpenSans';
+	background: @main-color;
+}
+
+.container{
+	display: flex;
+}
+.main-page{
+	padding: 138px 0 161px 0;
+}
+
+/***************** GREETING ***************/
+	.greeting{
+		background: url('../img/bg_greeting.jpg') no-repeat center/cover;
+		width: 41%;
+		box-sizing: border-box;
+		padding: 218px 5% 185px 7%;
+	}
+	.h1,
+	h1{
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: bold;
+		position: relative;
+		font-size: 24px;
+		margin-bottom: 64px;
+		&:after{
+			content: "";
+			position: absolute;
+			width: 92px;
+			height: 4px;
+			background:#fff;
+			bottom: -27px;
+			left: 0;
+		}
+	}
+	.greeting_text{
+		color: #c9e7fa;
+		font-size: 14px;
+		line-height: 1.7;
+	}
+
+
+/***************** REGISTRATION ***************/	
+	.h2,
+	h2{
+		color: @main-color;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 27px;
+	}
+	.registration_wrap{
+		width: 59%;
+		padding: 113px 0 143px 0;
+		background: #fff;
+		.registration{
+			max-width: 303px;
+			margin: 0 auto;
+		}
+		.tagline{
+			font-size: 12.7px;
+			margin-bottom: 27px;
+		}
+		.input-label{
+			position: absolute;
+			left: 19px;
+			top: 0;
+			transform: translateY(12px);
+			font-size: 14px;
+			color: #d1d1d1;
+			pointer-events: none;
+			transition: transform .2s ease-out, color .2s ease-out;
+			&.active {
+				transform: translate(-19px, -19px);
+				font-size: 12.5px;
+				color: @main-color;
+
+			}
+		}
+		.input{
+			width: 100%;
+			height: 41px;
+			border: 1px solid #ced8ea;
+			border-radius: 2px;
+			padding: 0 19px 0 19px;
+			transition: border-color .2s;
+			outline: 0;
+			&:focus{
+				border: 2px solid @main-color;
+			}
+		}
+		.input-field {
+			position: relative;
+			margin-bottom: 40px;
+			input.error {
+				border: 1px solid #c99ea5;
+			}
+			label.error {
+				display: none !important;
+			}
+		}
+		.password{
+			margin-bottom: 28px;
+		}
+		.signupbtn{
+			background: @main-color;
+			border: none;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 600;
+			width: 100%;
+			padding: 11px 0;
+			font-size: 11px;
+			letter-spacing: 0.5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 16px;
+			cursor: pointer;
+			transition: background .2s;
+			&:hover{
+				background-color: darken(@main-color, 10%);
+			}
+		}
+		.lock{
+			width: 16px;
+			margin: 0 6px 0 0;
+			border-radius: 2px;
+		}
+		.accepting{
+			color: #616161;
+			font-size: 12px;
+			text-align: center;
+		}
+		.accepting_link{
+			color: @main-color;
+		}
+	}
+	
